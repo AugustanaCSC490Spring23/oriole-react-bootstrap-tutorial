@@ -1,5 +1,6 @@
-import {Button, Alert, Form} from "react-bootstrap";
-const LoginForm = () => {
+import {Alert, Form} from "react-bootstrap";
+import Button from './Button';
+const LoginForm = (props) => {
     return (
         <Form>
         <Form.Group className = "mb-3 mx-3" controlId = "formBasicEmail">
@@ -18,9 +19,7 @@ const LoginForm = () => {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
 
-      <Button variant="secondary" type="submit">
-        Submit
-      </Button>
+      <Button label={props.label} onClick={props.onClick}  />
 
       </Form>
     )

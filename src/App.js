@@ -6,7 +6,6 @@ import LoginForm from "./Components/LoginForm"
 
 import Button from './Components/Button';
 
-
 const App = () => {
   const handleClick = () => {
     console.log('Button clicked!');
@@ -15,8 +14,7 @@ const App = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <LoginForm></LoginForm>
-      <Button label="Click me" onClick={handleClick} />
+      <LoginForm onClick={handleClick} label="submit"> </LoginForm>
     </div>
   );
 };
