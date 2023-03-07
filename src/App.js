@@ -4,15 +4,21 @@ import './App.css';
 import Navbar from "./Components/Navbar"
 import LoginForm from "./Components/LoginForm"
 
-function App() {
+import Button from './Components/Button';
+
+
+const App = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
   return (
-    <div className="App">
- 
-    <Navbar></Navbar>
-    <LoginForm></LoginForm>
-      
+    <div>
+      <Navbar></Navbar>
+      <LoginForm></LoginForm>
+      <Button label="Click me" onClick={handleClick} />
     </div>
   );
-}
+};
 
 export default App;
